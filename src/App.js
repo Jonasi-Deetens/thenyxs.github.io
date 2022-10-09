@@ -7,14 +7,13 @@ import Navbar from './Navigation/Navbar.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
         <div>
           <Navbar />
-        </div>;
+        </div>
       </header>
-      <main>
-
+      <main className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
       </main>
       <footer>
 
