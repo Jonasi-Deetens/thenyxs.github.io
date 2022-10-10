@@ -7,7 +7,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Home from './component/home';
 import About from './component/about';
 
-import Navbar from './Navigation/Navbar.js';
+import Navbar from './navigation/navbar.js';
 
 import {
   BrowserRouter as Router,
