@@ -1,6 +1,9 @@
 import React from 'react';
 
-import Link from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Link
+  } from 'react-router-dom';
 
 const Footer = () => {
     return (
