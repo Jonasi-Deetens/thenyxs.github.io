@@ -1,5 +1,10 @@
 import React from "react";
 
+import {
+    BrowserRouter as Router,
+    Link
+  } from 'react-router-dom';
+
 const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,9 +29,8 @@ const Navbar = () => {
                         Dropdown link
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Action</a></li>
-                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                        <li><Link to="/" className="dropdown-item" href="#">Home</Link></li>
+                        <li><Link to="/about" className="dropdown-item" href="#">About us</Link></li>
                     </ul>
                     </li>
                 </ul>
