@@ -8,6 +8,7 @@ import Home from './component/home';
 import About from './component/about';
 
 import Navbar from './navigation/navbar.js';
+import Footer from './component/footer.js';
 
 import {
   BrowserRouter as Router,
@@ -32,12 +33,13 @@ function App() {
           </Routes>
         </div>
       </main>
-      <footer>
-
+      <footer className="py-3 my-4">
+        <div>
+          <Footer />
+        </div>
       </footer>
       </div>
     </Router>
-    
   );
 }
 
