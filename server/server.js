@@ -29,7 +29,7 @@ app.use(cors({ origin: true }));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.get("/home", function(req, res) {
+app.get("/books", function(req, res) {
 
   Book.find({}, function(err, foundBooks) {
     console.log(foundBooks.length )
