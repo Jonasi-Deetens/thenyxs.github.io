@@ -1,29 +1,17 @@
-const express = require('express');
-const mysql = require('mysql');
-const cors = require('cors');
+const mongoose = require('mongoose');
 
-const db = mysql.createPool({
-    host: 'localhost', // the host name MYSQL_DATABASE: node_mysql
-    user: 'react', // database user MYSQL_USER: MYSQL_USER
-    password: 'Fl4shback321!', // database user password MYSQL_PASSWORD: MYSQL_PASSWORD
-    database: 'reactdb' // database name MYSQL_HOST_IP: mysql_db
-  })
+mongoose.connect("mongodb://localhost:27017/reactdb", { useNewUrlParser: true });
 
-const app = express();
+const bookSchema = new mongoose.bookSchema ({
+    name: String,
+    review: String
+});
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }));
-app.use(cors())
+const Book = mongoose.model("Book", bookSchema); // converts to "books" in db collections
 
-app.get('/', (req, res) => {
-    
-  });
+const book = new Book({
+    name: "Test",
+    review: "This shit works!"
+});
 
-app.get('/get', (req, res) => {
-    const SelectQuery = " SELECT * FROM books_reviews";
-    db.query(SelectQuery, (err, result) => {
-    res.send(result)
-    })
-})
-
-app.listen('3001', () => { })
+book.save();

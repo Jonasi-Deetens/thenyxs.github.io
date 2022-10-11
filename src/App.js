@@ -25,7 +25,7 @@ function App() {
           <Navbar />
         </div>
       </header>
-      <main className="App-header">
+      <main className="App-body">
         <div>
           <Routes>
             <Route exact path='/home' element={< Home />}></Route>
