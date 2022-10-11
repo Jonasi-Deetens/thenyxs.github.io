@@ -9,11 +9,10 @@ const db = mysql.createPool({
     database: 'books' // database name MYSQL_HOST_IP: mysql_db
   })
 
-app.use(cors())
-
 const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.send('Hi There')
@@ -25,3 +24,5 @@ app.get('/get', (req, res) => {
     res.send(result)
     })
 })
+
+app.listen('3001', () => { })
