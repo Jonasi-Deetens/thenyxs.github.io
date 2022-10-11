@@ -2,18 +2,18 @@ import React from 'react';
 import { useState, useEffect } from 'react';
   
 const BookList = () => {
-    const [book, setBook] = useState({}); 
+    const [books, setBooks] = useState({}); 
 
     useEffect(() => {
-        fetch("/home")
+        fetch("http://localhost:3000/home")
         .then(res => res.json())
-        .then(book => setBook(book))
+        .then(books => setBooks(books))
     }, []);
 
     return (
     <div>
-        <p>{book.title}</p>
-        <p>{book.review}</p>
+        <p>{books[0].title}</p>
+        <p>{books[0].review}</p>
     </div>
     );
 }
