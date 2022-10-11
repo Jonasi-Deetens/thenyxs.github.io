@@ -4,8 +4,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import Home from './component/home';
-import About from './component/about';
+import Home from './component/home.js';
+import About from './component/about.js';
 
 import Navbar from './navigation/navbar.js';
 import Footer from './component/footer.js';
