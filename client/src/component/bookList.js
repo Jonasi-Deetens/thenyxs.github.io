@@ -8,6 +8,7 @@ const BookList = () => {
         fetch("http://localhost:3000/home")
         .then(res => res.json())
         .then(books => setBooks(books))
+        console.log(books);
     }, []);
 
     return (
