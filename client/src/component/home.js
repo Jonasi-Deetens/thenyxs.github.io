@@ -1,9 +1,13 @@
 import React from 'react';
 import logo from '../logo.svg';
+import BookList from './bookList';
   
 function Home (){
     return (
-        <img src={logo} className="App-logo" alt="logo" />
+        <div>
+            <img src={logo} className="App-logo" alt="logo" />
+            <BookList />
+        </div>
     );
 }
   
