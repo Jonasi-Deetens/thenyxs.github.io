@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.connect("mongodb://localhost:27017/reactdb", { useNewUrlParser: true });
 
-const bookSchema = new mongoose.bookSchema ({
+const bookSchema = new mongoose.Schema ({
     name: String,
     review: String
 });
