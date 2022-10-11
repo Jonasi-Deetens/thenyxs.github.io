@@ -1,7 +1,7 @@
 import React from 'react';
   
 function About () {
-    return 
+    return (
     <div>
         <h2>GeeksforGeeks is a computer science portal for geeks!</h2>
   
@@ -10,5 +10,6 @@ function About () {
             https://www.geeksforgeeks.org/about/
         </a>
     </div>
+    );
 }
 export default About;

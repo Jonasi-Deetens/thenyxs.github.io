@@ -21,6 +21,6 @@ const Footer = () => {
             <ScrollToTop />
         </div>
     );
-};
+}
 
 export default Footer;
