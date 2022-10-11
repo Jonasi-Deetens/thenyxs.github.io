@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
+const cors = require('cors');
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/reactDB');
 
@@ -23,6 +25,7 @@ const book2 = new Book({
 
 const app = express();
 
+app.use(cors({ origin: true }));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
