@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.get("/", function(req, res) {
+app.get("/home", function(req, res) {
 
   Book.find({}, function(err, foundBooks) {
 
