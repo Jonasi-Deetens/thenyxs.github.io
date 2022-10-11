@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 app.get("/home", function(req, res) {
 
   Book.find({}, function(err, foundBooks) {
-
+    console.log(foundBooks.length )
     if (foundBooks.length === 0) {
       Book.insertMany([book1, book2], function(err){
         if (err) {
