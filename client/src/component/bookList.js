@@ -15,8 +15,8 @@ const BookList = () => {
 
     return (
         <div>
-            <p>{data.title}</p>
-            <p>{data.review}</p>
+            <p>{books[0].title}</p>
+            <p>{books[0].review}</p>
         </div>
     );
 }
