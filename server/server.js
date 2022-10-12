@@ -1,5 +1,4 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const cors = require('cors');
 
@@ -27,8 +26,7 @@ const app = express();
 
 app.use(cors({ origin: true }));
 
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.get("/api/books", async(req, res) => {
   console.log("Inside getter")
