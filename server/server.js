@@ -44,7 +44,7 @@ app.get("/api/books", function(req, res) {
       });
       res.redirect("/");
     } else {
-      res.json({
+      return res.json({
         books: foundBooks
       })
     }
