@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
   
 const BookList = () => {
-    const [data, setDataS] = useState({}); 
+    const [data, setData] = useState({}); 
 
     useEffect(async () => {
         const result = await fetch("/api/books", {
@@ -18,8 +18,8 @@ const BookList = () => {
 
     return (
         <div>
-            <p>{books.title}</p>
-            <p>{books.review}</p>
+            <p>{data.title}</p>
+            <p>{data.review}</p>
         </div>
     );
 }
