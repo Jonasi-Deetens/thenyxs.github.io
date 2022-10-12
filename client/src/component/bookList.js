@@ -8,7 +8,7 @@ const BookList = () => {
         fetch("/")
         .then(res => res.json())
         .then(books => setBooks(books))
-        console.log(books);
+        console.log(books[0]);
     }, []);
 
     return (
