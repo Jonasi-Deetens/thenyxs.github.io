@@ -5,7 +5,7 @@ const BookList = () => {
     const [books, setBooks] = useState({}); 
 
     useEffect(() => {
-        fetch("http://139.162.182.113/api/books")
+        fetch("http://139.162.182.113:3001/api/books")
         .then(res => res.json())
         .then(books => setBooks(books))
         console.log(books[0]);
