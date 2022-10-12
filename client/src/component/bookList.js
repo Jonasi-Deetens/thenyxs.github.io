@@ -5,7 +5,14 @@ const BookList = () => {
     const [books, setBooks] = useState({}); 
 
     useEffect(() => {
-        fetch("/api/books")
+        fetch("/api/books", {
+            // mode: 'no-cors',
+            method: 'GET',
+            headers: {
+              Accept: 'application/json',
+            },
+          },
+          )
          .then((res) => console.log(res));
        }, []);
 
