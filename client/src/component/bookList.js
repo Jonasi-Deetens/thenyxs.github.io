@@ -3,18 +3,11 @@ import { useState, useEffect } from 'react';
   
 const BookList = () => {
     const [books, setBooks] = useState({}); 
-    const items = [];
 
     useEffect(() => {
         fetch("/api/books")
-            .then((res) => res.json())
-            .then((json) => {
-                this.setState({
-                    items: json,
-                    DataisLoaded: true
-                });
-            })
-    });
+         .then((res) => console.log(res));
+       }, []);
 
     return (
         <div>
