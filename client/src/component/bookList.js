@@ -5,18 +5,12 @@ const BookList = () => {
     const [data, setData] = useState({}); 
 
     useEffect(async () => {
-        const result = await fetch("/api/books", {
-            // mode: 'no-cors',
-            method: 'GET',
-            headers: {
-              Accept: 'application/json',
-            },
-          },
-          )
-          setData(result.data);
-          console.log(result);
-          console.log(result.data);
-       }, []);
+        fetch('/api/books')
+        .then(result => result.json())
+        .then(data => {
+            console.log("data",data);
+        });
+    }, []);
 
     return (
         <div>
