@@ -30,7 +30,7 @@ app.use(cors({ origin: true }));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.get("/api/books", function(req, res) {
+app.get("/api/books", async(req, res) => {
   console.log("Inside getter")
   Book.find({}, function(err, foundBooks) {
     console.log(foundBooks.length )
