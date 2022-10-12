@@ -13,7 +13,7 @@ const BookList = () => {
             },
           },
           )
-         .then(setData(result.data));
+          setData(result.data);
        }, []);
 
     return (
