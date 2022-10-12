@@ -28,7 +28,7 @@ app.use(cors({ origin: true }));
 
 app.use(express.json());
 
-app.get("/api/books", async(req, res) => {
+app.get("/api/books", function(req, res) {
   console.log("Inside getter")
   Book.find({}, function(err, foundBooks) {
     console.log(foundBooks.length )

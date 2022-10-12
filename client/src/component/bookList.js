@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const BookList = () => {
     const books = [];
 
-    useEffect(async () => {
+    useEffect( () => {
         fetch('/api/books')
         .then(result => result.json())
         .then(data => {
