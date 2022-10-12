@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get("/", function(req, res) {
-
+  console.log("Inside getter")
   Book.find({}, function(err, foundBooks) {
     console.log(foundBooks.length )
     if (foundBooks.length === 0) {
