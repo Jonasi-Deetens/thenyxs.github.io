@@ -9,7 +9,7 @@ const BookList = () => {
         .then(result => result.json())
         .then(data => {
             console.log("data",data);
-            books = new [data];
+            books = new [data.json];
         });
     }, []);
 
