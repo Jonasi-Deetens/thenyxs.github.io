@@ -13,13 +13,13 @@ const bookSchema = new mongoose.Schema({
 const Book = new mongoose.model("Book", bookSchema);
 
 const book1 = new Book({
-  title: "Test title1",
-  review: "This is awesome"
+  title: "Congratulations:",
+  review: "You have set up your first MERN Stack!"
 });
 
 const book2 = new Book({
-  title: "Test title2",
-  review: "This is 2 awesome"
+  title: "Step 2:",
+  review: "Make a secure https link available."
 });
 
 const app = express();

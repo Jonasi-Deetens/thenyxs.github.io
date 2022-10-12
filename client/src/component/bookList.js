@@ -17,7 +17,7 @@ const BookList = () => {
     return (
         <div>
             {books.map(({ title, review }) => (
-                <p> {title}'s birthday is on {review} </p>
+                <p> {title} {review} </p>
             ))}
         </div>
     );
