@@ -23,7 +23,14 @@
     "save-dev": "^0.0.1-security",
     "web-vitals": "^2.1.4"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3001"
+    },
+    "/assets": {
+      "target": "http://localhost:3001"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
