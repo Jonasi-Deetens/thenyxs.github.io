@@ -29,7 +29,7 @@ app.use(cors({ origin: true }));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.get("/", function(req, res) {
+app.get("/api/books", function(req, res) {
   console.log("Inside getter")
   Book.find({}, function(err, foundBooks) {
     console.log(foundBooks.length )
@@ -51,6 +51,6 @@ app.get("/", function(req, res) {
 
 });
 
-app.listen(3000, () => {
+app.listen(3001, () => {
   console.log('Server is running on port: 3001');
 });

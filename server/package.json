@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "proxy": "http://139.162.182.113:3000",
+  "proxy": "http://139.162.182.113:3001/api",
   "keywords": [],
   "author": "",
   "license": "ISC",
