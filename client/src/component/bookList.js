@@ -13,8 +13,8 @@ const BookList = () => {
 
     return (
     <div>
-        <p>{books.title}</p>
-        <p>{books.review}</p>
+        <p>{books[0].title}</p>
+        <p>{books[0].review}</p>
     </div>
     );
 }
