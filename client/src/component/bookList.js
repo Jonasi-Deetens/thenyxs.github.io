@@ -2,10 +2,10 @@ import React from 'react';
 import { useState, useEffect } from 'react';
   
 const BookList = () => {
-    const [books, setBooks] = useState({}); 
+    const [data, setDataS] = useState({}); 
 
-    useEffect(() => {
-        fetch("/api/books", {
+    useEffect(async () => {
+        const result = await fetch("/api/books", {
             // mode: 'no-cors',
             method: 'GET',
             headers: {
@@ -13,7 +13,7 @@ const BookList = () => {
             },
           },
           )
-         .then((res) => console.log(res));
+         .then(setData(result.data));
        }, []);
 
     return (
