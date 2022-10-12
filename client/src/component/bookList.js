@@ -14,6 +14,8 @@ const BookList = () => {
           },
           )
           setData(result.data);
+          console.log(result);
+          console.log(result.data);
        }, []);
 
     return (
