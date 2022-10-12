@@ -11,8 +11,8 @@ const BookList = () => {
 
     return (
         <div>
-            <p>{items.books[0].title}</p>
-            <p>{items.review}</p>
+            <p>{books.title}</p>
+            <p>{books.review}</p>
         </div>
     );
 }
