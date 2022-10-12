@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
   
 const BookList = () => {
-    const books = null;
+    const books = ['yr'];
 
     useEffect( () => {
         fetch('/api/books')
