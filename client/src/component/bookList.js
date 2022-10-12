@@ -2,21 +2,23 @@ import React from 'react';
 import { useState, useEffect } from 'react';
   
 const BookList = () => {
-    const books = ['yr'];
+    let [books, setBooks] = useState([]);
 
     useEffect( () => {
         fetch('/api/books')
         .then(result => result.json())
         .then(data => {
             console.log("data",data);
-            books = new [data.json];
+            books = setBooks(data.books);
+            console.log("data",books);
         });
     }, []);
 
     return (
         <div>
-            <p>{books[0].title}</p>
-            <p>{books[0].review}</p>
+            {books.map(({ title, review }) => (
+                <p> {title}'s birthday is on {review} </p>
+            ))}
         </div>
     );
 }
