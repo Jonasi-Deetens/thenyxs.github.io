@@ -8,13 +8,13 @@ const BookList = () => {
         fetch("/api/books")
         .then(res => res.json())
         .then(books => setBooks(books))
-        console.log(books[0]);
+        console.log(books);
     }, []);
 
     return (
     <div>
-        <p>{books[0].title}</p>
-        <p>{books[0].review}</p>
+        <p>{books.title}</p>
+        <p>{books.review}</p>
     </div>
     );
 }
