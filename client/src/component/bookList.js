@@ -2,13 +2,14 @@ import React from 'react';
 import { useState, useEffect } from 'react';
   
 const BookList = () => {
-    const [data, setData] = useState({}); 
+    const books = [];
 
     useEffect(async () => {
         fetch('/api/books')
         .then(result => result.json())
         .then(data => {
             console.log("data",data);
+            books = data.books;
         });
     }, []);
 
