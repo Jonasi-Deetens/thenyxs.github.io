@@ -21,9 +21,7 @@ function App() {
     <Router>
       <div className="App">
       <header>
-        <div>
           <Navbar />
-        </div>
       </header>
       <main className="App-body">
         <div>

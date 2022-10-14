@@ -1,10 +1,10 @@
 import React from 'react';
-import logo from '../logo.svg';
+import logo from '../assets/logo.svg';
 import BookList from './bookList';
   
 const Home = () => {
     return (
-        <div>
+        <div className="container">
             <img src={logo} className="App-logo" alt="logo" />
             <BookList />
         </div>

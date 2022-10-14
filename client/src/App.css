@@ -28,6 +28,31 @@
   color: #61dafb;
 }
 
+.Brand-logo {
+  width: 100%;
+  max-width: 240px;
+}
+
+.nav-item {
+  font-weight: bold;
+}
+
+.navbar {
+  display: block!important;
+}
+
+.navbar-nav {
+  padding-top: 100px;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.text-right {
+  /*text-align: right!important;*/
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

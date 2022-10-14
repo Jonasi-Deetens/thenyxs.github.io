@@ -40,14 +40,12 @@ app.get("/api/books", function(req, res) {
           console.log("Succesfully inserted Books.")
         }
       });
-      res.redirect("/");
     } else {
       return res.json({
         books: foundBooks
       })
     }
   });
-
 });
 
 app.listen(3001, () => {
