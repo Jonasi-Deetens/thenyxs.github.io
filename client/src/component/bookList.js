@@ -3,17 +3,19 @@ import { useState, useEffect } from 'react';
   
 const BookList = () => {
     let [books, setBooks] = useState([]);
-
+    
     useEffect( () => {
-        fetch('/api/books')
+        fetch('/api/addBooks')
+    }, []);
+    
+    useEffect( () => {
+        fetch('/api/getBooks')
         .then(result => result.json())
         .then(data => {
-            console.log("data",data);
             books = setBooks(data.books);
-            console.log("data",books);
         });
     }, []);
-
+    
     return (
         <div>
             {books.map(({ title, review }) => (

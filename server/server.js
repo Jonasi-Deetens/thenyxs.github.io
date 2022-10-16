@@ -1,51 +1,33 @@
 const express = require('express');
-
 const cors = require('cors');
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/reactDB');
+const db = require('./dbconnection');
+db.connect();
 
-const bookSchema = new mongoose.Schema({
-  title: String,
-  review: String
-});
-
-const Book = new mongoose.model("Book", bookSchema);
-
-const book1 = new Book({
-  title: "Congratulations:",
-  review: "You have set up your first MERN Stack!"
-});
-
-const book2 = new Book({
-  title: "Step 2:",
-  review: "Make a secure https link available."
-});
+const book = require('./schemas/bookSchema');
 
 const app = express();
 
 app.use(cors({ origin: true }));
-
 app.use(express.json());
 
-app.get("/api/books", function(req, res) {
-  console.log("Inside getter")
-  Book.find({}, function(err, foundBooks) {
-    console.log(foundBooks.length )
-    if (foundBooks.length === 0) {
-      Book.insertMany([book1, book2], function(err){
-        if (err) {
-          console.log(err);
-        } else {
-          console.log("Succesfully inserted Books.")
-        }
-      });
-    } else {
-      return res.json({
-        books: foundBooks
-      })
-    }
+app.get("/api/getBooks", function(req, res) {
+
+  var query = book.findBooks();
+  query.exec(function(err,foundBooks){
+    if(err)
+      return console.log(err);
+    return res.json({
+      books: foundBooks
+    })
   });
+
+});
+
+app.get("/api/addBooks", function(req, res) {
+
+  book.insertManyBooks();
+
 });
 
 app.listen(3001, () => {
