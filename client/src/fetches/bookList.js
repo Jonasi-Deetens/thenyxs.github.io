@@ -5,11 +5,7 @@ const BookList = () => {
     let [books, setBooks] = useState([]);
     
     useEffect( () => {
-        fetch('/api/addBooks')
-    }, []);
-    
-    useEffect( () => {
-        fetch('/api/getBooks')
+        fetch('/api/getAllBooks')
         .then(result => result.json())
         .then(data => {
             books = setBooks(data.books);
@@ -18,9 +14,13 @@ const BookList = () => {
     
     return (
         <div>
-            {books.map(({ title, review }) => (
-                <p> {title} {review} </p>
-            ))}
+        {
+            React.Children.toArray(
+                books.map(({ title, review }) => (
+                    <p> {title} {review} </p>
+                ))
+            )
+        }
         </div>
     );
 }
